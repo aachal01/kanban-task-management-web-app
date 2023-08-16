@@ -30,3 +30,4 @@ CREATE TABLE subtask_table (
     task_id INT NOT NULL,
     FOREIGN KEY (task_id) REFERENCES task_table(id) ON DELETE CASCADE
 );
+

@@ -1,7 +1,8 @@
 package dev.aachal.kanbanwebapp.controller;
 
 import dev.aachal.kanbanwebapp.model.Column;
-import dev.aachal.kanbanwebapp.repository.ColumnCollectionRepository;
+import dev.aachal.kanbanwebapp.repository.contentCollectionRepository.ColumnCollectionRepository;
+import dev.aachal.kanbanwebapp.repository.contentRepository.ColumnRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,25 +15,26 @@ import java.util.List;
 @RequestMapping("/api/column")
 public class ColumnController {
 
-    private final ColumnCollectionRepository repository;
+//    private final ColumnCollectionRepository repository;
+private final ColumnRepository repository;
 
 
     @Autowired
-    public ColumnController(ColumnCollectionRepository repository) {
+    public ColumnController(ColumnRepository repository) {
         this.repository = repository;
     }
 
     //Read All
     @GetMapping("")
     public List<Column> findAllColumn() {
-        return repository.findAllColumns();
+        return repository.findAll();
     }
 
 
     //Read by ID
     @GetMapping("/{id}")
     public Column findColumnById(@PathVariable Integer id) {
-        return repository.findColumnById(id)
+        return repository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Content Not Found"));
     }
 
@@ -40,7 +42,7 @@ public class ColumnController {
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
     public void createColumn(@Valid @RequestBody Column column){
-        repository.saveColumn(column);
+        repository.save(column);
     }
 
     //Update existing Columns
@@ -51,13 +53,13 @@ public class ColumnController {
         if(!repository.existsById(id)){
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Content Not Found");
         }
-        repository.saveColumn(column);
+        repository.save(column);
     }
 
     //Delete the Column
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{id}")
     public void deleteColumn(@PathVariable Integer id){
-        repository.deleteColumn(id);
+        repository.deleteById(id);
     }
 }

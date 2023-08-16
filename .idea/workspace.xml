@@ -4,11 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60fe721d-ad69-4b94-af59-42ce61932307" name="Changes" comment="Completed logic of Model, Controller and Repository of Board, Column, Task and Subtask">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="60fe721d-ad69-4b94-af59-42ce61932307" name="Changes" comment="Created sql schema for the Kanban application">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/controller/ColumnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/controller/ColumnController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/controller/SubtaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/controller/SubtaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/controller/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/model/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/model/Column.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/model/Column.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/model/Subtask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/model/Subtask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/model/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/repository/BoardCollectionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/repository/contentCollectionRepository/BoardCollectionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/repository/ColumnCollectionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/repository/contentCollectionRepository/ColumnCollectionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/repository/SubtaskCollectionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/repository/contentCollectionRepository/SubtaskCollectionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/repository/TaskCollectionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/repository/contentCollectionRepository/TaskCollectionRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +32,9 @@
       <list>
         <option value="Record" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="AnnotationType" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -75,6 +88,9 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="dev.aachal.kanbanwebapp.model" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="dev.aachal.kanbanwebapp.repository.contentCollectionRepository" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Application">
@@ -140,7 +156,23 @@
       <option name="project" value="LOCAL" />
       <updated>1692008524835</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Connected/configured in-memory H2 sql-database">
+      <option name="closed" value="true" />
+      <created>1692092000395</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1692092000395</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Created sql schema for the Kanban application">
+      <option name="closed" value="true" />
+      <created>1692096626876</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1692096626876</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,6 +189,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Spring Setup" />
     <MESSAGE value="Completed logic of Model, Controller and Repository of Board, Column, Task and Subtask" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed logic of Model, Controller and Repository of Board, Column, Task and Subtask" />
+    <MESSAGE value="Connected/configured in-memory H2 sql-database" />
+    <MESSAGE value="Created sql schema for the Kanban application" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created sql schema for the Kanban application" />
   </component>
 </project>

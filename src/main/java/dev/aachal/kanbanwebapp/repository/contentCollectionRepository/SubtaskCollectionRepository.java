@@ -1,4 +1,4 @@
-package dev.aachal.kanbanwebapp.repository;
+package dev.aachal.kanbanwebapp.repository.contentCollectionRepository;
 
 
 import dev.aachal.kanbanwebapp.model.Subtask;

@@ -2,7 +2,8 @@ package dev.aachal.kanbanwebapp.controller;
 
 
 import dev.aachal.kanbanwebapp.model.Task;
-import dev.aachal.kanbanwebapp.repository.TaskCollectionRepository;
+import dev.aachal.kanbanwebapp.repository.contentCollectionRepository.TaskCollectionRepository;
+import dev.aachal.kanbanwebapp.repository.contentRepository.TaskRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,25 +16,25 @@ import java.util.List;
 @RequestMapping("/api/task")
 public class TaskController {
 
-    private final TaskCollectionRepository repository;
-
+//    private final TaskCollectionRepository repository;
+private final TaskRepository repository;
 
     @Autowired
-    public TaskController(TaskCollectionRepository repository) {
+    public TaskController(TaskRepository repository) {
         this.repository = repository;
     }
 
     //Read All
     @GetMapping("")
     public List<Task> findAllTask() {
-        return repository.findAllTasks();
+        return repository.findAll();
     }
 
 
     //Read by ID
     @GetMapping("/{id}")
     public Task findTaskById(@PathVariable Integer id) {
-        return repository.findTaskById(id)
+        return repository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Content Not Found"));
     }
 
@@ -41,7 +42,7 @@ public class TaskController {
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
     public void createTask(@Valid @RequestBody Task task){
-        repository.saveTask(task);
+        repository.save(task);
     }
 
     //Update existing tasks
@@ -52,13 +53,13 @@ public class TaskController {
         if(!repository.existsById(id)){
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Content Not Found");
         }
-        repository.saveTask(task);
+        repository.save(task);
     }
 
     //Delete the task
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{id}")
     public void deleteTask(@PathVariable Integer id){
-        repository.deleteTask(id);
+        repository.deleteById(id);
     }
 }
