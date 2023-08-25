@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60fe721d-ad69-4b94-af59-42ce61932307" name="Changes" comment="CRUD operations using ListCRUDRepository">
+    <list default="true" id="60fe721d-ad69-4b94-af59-42ce61932307" name="Changes" comment="Adding data to database using CommandLine Runner">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/controller/ColumnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/controller/ColumnController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/model/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/model/Column.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/model/BoardColumn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/model/Subtask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/model/Subtask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/model/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/repository/contentCollectionRepository/BoardCollectionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/repository/contentCollectionRepository/BoardCollectionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/repository/contentCollectionRepository/ColumnCollectionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/repository/contentCollectionRepository/ColumnCollectionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/repository/contentCollectionRepository/SubtaskCollectionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/repository/contentCollectionRepository/SubtaskCollectionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/repository/contentCollectionRepository/TaskCollectionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/aachal/kanbanwebapp/repository/contentCollectionRepository/TaskCollectionRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,11 +18,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Record" />
         <option value="Enum" />
         <option value="AnnotationType" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -180,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692175697839</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Adding data to database using CommandLine Runner">
+      <option name="closed" value="true" />
+      <created>1692954818214</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1692954818214</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -200,6 +198,7 @@
     <MESSAGE value="Connected/configured in-memory H2 sql-database" />
     <MESSAGE value="Created sql schema for the Kanban application" />
     <MESSAGE value="CRUD operations using ListCRUDRepository" />
-    <option name="LAST_COMMIT_MESSAGE" value="CRUD operations using ListCRUDRepository" />
+    <MESSAGE value="Adding data to database using CommandLine Runner" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding data to database using CommandLine Runner" />
   </component>
 </project>
