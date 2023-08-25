@@ -1,7 +1,6 @@
 package dev.aachal.kanbanwebapp.controller;
 
-import dev.aachal.kanbanwebapp.model.Column;
-import dev.aachal.kanbanwebapp.repository.contentCollectionRepository.ColumnCollectionRepository;
+import dev.aachal.kanbanwebapp.model.BoardColumn;
 import dev.aachal.kanbanwebapp.repository.contentRepository.ColumnRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,14 +25,14 @@ private final ColumnRepository repository;
 
     //Read All
     @GetMapping("")
-    public List<Column> findAllColumn() {
+    public List<BoardColumn> findAllColumn() {
         return repository.findAll();
     }
 
 
     //Read by ID
     @GetMapping("/{id}")
-    public Column findColumnById(@PathVariable Integer id) {
+    public BoardColumn findColumnById(@PathVariable Integer id) {
         return repository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Content Not Found"));
     }
@@ -41,14 +40,14 @@ private final ColumnRepository repository;
     //Create new Columns
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
-    public void createColumn(@Valid @RequestBody Column column){
+    public void createColumn(@Valid @RequestBody BoardColumn column){
         repository.save(column);
     }
 
     //Update existing Columns
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping("/{id}")
-    public void updateColumn(@RequestBody Column column, @PathVariable
+    public void updateColumn(@RequestBody BoardColumn column, @PathVariable
     Integer id){
         if(!repository.existsById(id)){
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Content Not Found");

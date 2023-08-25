@@ -39,16 +39,16 @@ public class TaskCollectionRepository {
         taskList.removeIf(c -> c.id().equals(id));
     }
 
-    @PostConstruct
-    private void init(){
-        Task task = new Task(
-                1,
-                "Platform Launch",
-                "",
-                "",
-                new ArrayList<>()
-        );
-
-        taskList.add(task);
-    }
+//    @PostConstruct
+//    private void init(){
+//        Task task = new Task(
+//                1,
+//                "Platform Launch",
+//                "",
+//                "",
+//                new ArrayList<>()
+//        );
+//
+//        taskList.add(task);
+//    }
 }

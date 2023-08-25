@@ -40,14 +40,14 @@ public class SubtaskCollectionRepository {
         subtaskList.removeIf(c -> c.id().equals(id));
     }
 
-    @PostConstruct
-    private void init(){
-        Subtask subtask = new Subtask(
-                1,
-                "Subtask 1",
-                true
-        );
-
-        subtaskList.add(subtask);
-    }
+//    @PostConstruct
+//    private void init(){
+//        Subtask subtask = new Subtask(
+//                1,
+//                "Subtask 1",
+//                true
+//        );
+//
+//        subtaskList.add(subtask);
+//    }
 }

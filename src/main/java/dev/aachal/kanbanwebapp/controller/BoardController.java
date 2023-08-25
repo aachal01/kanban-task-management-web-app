@@ -2,13 +2,14 @@ package dev.aachal.kanbanwebapp.controller;
 
 
 import dev.aachal.kanbanwebapp.model.Board;
-import dev.aachal.kanbanwebapp.repository.contentCollectionRepository.BoardCollectionRepository;
 import dev.aachal.kanbanwebapp.repository.contentRepository.BoardRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+
+
 
 import java.util.List;
 

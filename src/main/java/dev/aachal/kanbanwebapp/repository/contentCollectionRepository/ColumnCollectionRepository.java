@@ -1,6 +1,6 @@
 package dev.aachal.kanbanwebapp.repository.contentCollectionRepository;
 
-import dev.aachal.kanbanwebapp.model.Column;
+import dev.aachal.kanbanwebapp.model.BoardColumn;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Repository;
 
@@ -10,22 +10,22 @@ import java.util.Optional;
 
 @Repository
 public class ColumnCollectionRepository {
-    private final List<Column> columnList = new ArrayList<>();
+    private final List<BoardColumn> columnList = new ArrayList<>();
 
     public ColumnCollectionRepository(){
     }
 
 
     //Read All
-    public List<Column> findAllColumns(){
+    public List<BoardColumn> findAllColumns(){
         return columnList;
     }
 
-    public Optional<Column> findColumnById(Integer id){
+    public Optional<BoardColumn> findColumnById(Integer id){
         return columnList.stream().filter(b->b.id().equals(id)).findFirst();
     }
 
-    public void saveColumn(Column column) {
+    public void saveColumn(BoardColumn column) {
         columnList.removeIf(c -> c.id().equals(column.id()));
         columnList.add(column);
     }
@@ -38,14 +38,14 @@ public class ColumnCollectionRepository {
         columnList.removeIf(c -> c.id().equals(id));
     }
 
-    @PostConstruct
-    private void init(){
-        Column column = new Column(
-                1,
-                "ToDo Column",
-                new ArrayList<>()
-        );
-
-        columnList.add(column);
-    }
+//    @PostConstruct
+//    private void init(){
+//        BoardColumn column = new BoardColumn(
+//                1,
+//                "ToDo Column",
+//                new ArrayList<>()
+//        );
+//
+//        columnList.add(column);
+//    }
 }

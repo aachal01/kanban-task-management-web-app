@@ -39,16 +39,16 @@ public class BoardCollectionRepository {
         boardList.removeIf(c -> c.id().equals(id));
     }
 
-    @PostConstruct
-    private void init(){
-        Board board = new Board(
-                1,
-                "Platform Launch",
-                new ArrayList<>()
-        );
-
-        boardList.add(board);
-    }
+//    @PostConstruct
+//    private void init(){
+//        Board board = new Board(
+//                1,
+//                "Platform Launch",
+//                new ArrayList<>()
+//        );
+//
+//        boardList.add(board);
+//    }
 
 
 }

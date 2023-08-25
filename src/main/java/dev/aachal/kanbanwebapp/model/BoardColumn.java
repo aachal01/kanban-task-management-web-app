@@ -1,19 +1,20 @@
 package dev.aachal.kanbanwebapp.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
-import org.springframework.scheduling.config.Task;
 import jakarta.validation.constraints.NotBlank;
 
-
-import java.util.List;
-
-@Table(value = "column_table")
-public record Column(
+@Table(value = "COLUMN_TABLE")
+public record BoardColumn(
         @Id
+        @Column(value = "ID")
         Integer id,
         @NotBlank
+        @Column(value = "TITLE")
         String title,
-        List<Task> tasks
+//        List<Task> tasks
+        @Column(value = "BOARD_ID")
+        Integer board
 ) {
 }
