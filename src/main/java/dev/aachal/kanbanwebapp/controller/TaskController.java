@@ -13,7 +13,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/task")
+@RequestMapping("/secured/api/task")
 public class TaskController {
 
 //    private final TaskCollectionRepository repository;

@@ -12,7 +12,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/subtask")
+@RequestMapping("/secured/api/subtask")
 public class SubtaskController {
 
 //    private final SubtaskCollectionRepository repository;

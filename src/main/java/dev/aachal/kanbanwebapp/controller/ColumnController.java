@@ -11,7 +11,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/column")
+@RequestMapping("/secured/api/column")
 public class ColumnController {
 
 //    private final ColumnCollectionRepository repository;

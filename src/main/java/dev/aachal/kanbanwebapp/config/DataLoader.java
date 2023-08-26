@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.aachal.kanbanwebapp.model.Board;
 import dev.aachal.kanbanwebapp.repository.contentRepository.BoardRepository;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 import com.fasterxml.jackson.core.type.TypeReference;
 

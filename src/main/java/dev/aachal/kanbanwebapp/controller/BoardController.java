@@ -14,7 +14,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/board")
+@RequestMapping("/secured/api/board")
 public class BoardController {
 
 //    private final BoardCollectionRepository repository;
